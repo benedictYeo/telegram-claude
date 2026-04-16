@@ -51,10 +51,10 @@ Done by Ben before Claude Code starts. Don't proceed to Phase 1 until every box 
 **Goal:** Echo bot that only responds to me, deployed and verified.
 
 ### 1.1 Project scaffold
-- [ ] 1.1.1 `npm init -y`
-- [ ] 1.1.2 `npm install -D wrangler typescript @cloudflare/workers-types vitest @cloudflare/vitest-pool-workers`
-- [ ] 1.1.3 Create `tsconfig.json` (target ES2022, strict, lib: ESNext)
-- [ ] 1.1.4 Create `wrangler.toml`:
+- [x] 1.1.1 `npm init -y`
+- [x] 1.1.2 `npm install -D wrangler typescript @cloudflare/workers-types vitest @cloudflare/vitest-pool-workers`
+- [x] 1.1.3 Create `tsconfig.json` (target ES2022, strict, lib: ESNext)
+- [x] 1.1.4 Create `wrangler.toml`:
   ```toml
   name = "tg-claude"
   main = "src/index.ts"
@@ -64,33 +64,33 @@ Done by Ben before Claude Code starts. Don't proceed to Phase 1 until every box 
   [observability]
   enabled = true
   ```
-- [ ] 1.1.5 Create `.gitignore` (node_modules, .env*, .wrangler, dist, .dev.vars)
-- [ ] 1.1.6 Create `src/types.ts` with `Env` interface (all bindings + secrets typed)
+- [x] 1.1.5 Create `.gitignore` (node_modules, .env*, .wrangler, dist, .dev.vars)
+- [x] 1.1.6 Create `src/types.ts` with `Env` interface (all bindings + secrets typed)
 
 ### 1.2 Auth core
-- [ ] 1.2.1 Create `src/core/auth.ts` with `checkWebhookSignature(req, env)` returning `Response | null`
-- [ ] 1.2.2 Add `checkUserAllowed(update, env)` returning `boolean`
-- [ ] 1.2.3 Write unit tests in `test/auth.test.ts` (valid sig, invalid sig, missing sig, valid user, wrong user, missing user)
-- [ ] 1.2.4 `npx vitest run` → all green
+- [x] 1.2.1 Create `src/core/auth.ts` with `checkWebhookSignature(req, env)` returning `Response | null`
+- [x] 1.2.2 Add `checkUserAllowed(update, env)` returning `boolean`
+- [x] 1.2.3 Write unit tests in `test/auth.test.ts` (valid sig, invalid sig, missing sig, valid user, wrong user, missing user)
+- [x] 1.2.4 `npx vitest run` → all green
 
 ### 1.3 Telegram core
-- [ ] 1.3.1 Create `src/core/telegram.ts` with `tgSend(env, chatId, text, parseMode?)`
-- [ ] 1.3.2 Add `tgSendChatAction(env, chatId, action)` (typing indicator)
-- [ ] 1.3.3 Add `chunkMessage(text, max=4000)` returning `string[]`
-- [ ] 1.3.4 Unit test chunking edge cases (empty, single char, exactly 4000, 12000+)
+- [x] 1.3.1 Create `src/core/telegram.ts` with `tgSend(env, chatId, text, parseMode?)`
+- [x] 1.3.2 Add `tgSendChatAction(env, chatId, action)` (typing indicator)
+- [x] 1.3.3 Add `chunkMessage(text, max=4000)` returning `string[]`
+- [x] 1.3.4 Unit test chunking edge cases (empty, single char, exactly 4000, 12000+)
 
 ### 1.4 Webhook handler
-- [ ] 1.4.1 Create `src/handlers/telegram.ts` with `handleTelegramWebhook(req, env, ctx)`
-- [ ] 1.4.2 Parse update, run auth checks, echo back text via `tgSend`
-- [ ] 1.4.3 Silent drop on user mismatch (return 200, no message, no log)
-- [ ] 1.4.4 401 on signature mismatch
+- [x] 1.4.1 Create `src/handlers/telegram.ts` with `handleTelegramWebhook(req, env, ctx)`
+- [x] 1.4.2 Parse update, run auth checks, echo back text via `tgSend`
+- [x] 1.4.3 Silent drop on user mismatch (return 200, no message, no log)
+- [x] 1.4.4 401 on signature mismatch
 
 ### 1.5 Worker entry
-- [ ] 1.5.1 Create `src/index.ts` exporting `default { fetch, scheduled }`
-- [ ] 1.5.2 Route `POST /webhook` → `handleTelegramWebhook`
-- [ ] 1.5.3 Route `GET /health` → `200 "ok"` (no auth, no info disclosure)
-- [ ] 1.5.4 Catch-all → 404
-- [ ] 1.5.5 `scheduled` stub for now
+- [x] 1.5.1 Create `src/index.ts` exporting `default { fetch, scheduled }`
+- [x] 1.5.2 Route `POST /webhook` → `handleTelegramWebhook`
+- [x] 1.5.3 Route `GET /health` → `200 "ok"` (no auth, no info disclosure)
+- [x] 1.5.4 Catch-all → 404
+- [x] 1.5.5 `scheduled` stub for now
 
 ### 1.6 Local dev
 - [ ] 1.6.1 Create `.dev.vars` (gitignored) with all secrets for local testing
