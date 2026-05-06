@@ -554,22 +554,19 @@ describe("GET /health", () => {
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **tsx interpreter flag in PM2 7.x**
+1. **tsx interpreter flag in PM2 7.x** -- RESOLVED
    - What we know: tsx 4.x supports `--import tsx/esm` for Node.js native ESM
-   - What's unclear: Whether PM2 7.x's `interpreter_args` passes flags correctly to Node
-   - Recommendation: setup.sh should test both `interpreter: "tsx"` (global) and `interpreter: "node"` with `interpreter_args: "--import tsx/esm"`. Use whichever works; document in README.md.
+   - Resolution: Plan 01-04 uses `interpreter: "node"` with `interpreter_args: "--import tsx/esm"` as primary approach. setup.sh also installs tsx globally (`npm install -g tsx`) as fallback. If `--import tsx/esm` fails at runtime, the executor switches to `interpreter: "tsx"` (global). Both paths are documented in the ecosystem config and README.
 
-2. **Tailscale Funnel reboot persistence**
+2. **Tailscale Funnel reboot persistence** -- RESOLVED
    - What we know: `tailscale funnel --bg 3000` runs in background; Tailscale has a system daemon
-   - What's unclear: Whether the funnel config persists across Mac mini reboots automatically
-   - Recommendation: Test after first reboot. If not persistent, add `tailscale funnel 3000` as a PM2 app with `interpreter: "none"`.
+   - Resolution: Plan 01-05 (smoke test checkpoint) includes a reboot test (step 14-17) that explicitly verifies Funnel survives reboot. If it does not persist, the fallback (documented in RESEARCH.md Pitfall 3) is to add `tailscale funnel --bg 3000` as a third PM2 app with `interpreter: "none"`. The executor applies the fallback during the smoke test if needed.
 
-3. **Port choice**
+3. **Port choice** -- RESOLVED
    - What we know: Tailscale Funnel supports ports 443, 8443, 10000 externally; internally any port works
-   - What's unclear: Whether 3000 is already in use on the Mac mini
-   - Recommendation: Use 3000 as default in ecosystem.config.cjs; make it configurable via `PORT` env var.
+   - Resolution: Port 3000 is the default in ecosystem.config.cjs and .env.example. Configurable via `PORT` env var. If 3000 is in use on the Mac mini, the user changes it in .env before running setup.sh. No code changes needed.
 
 ---
 
