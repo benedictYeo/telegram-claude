@@ -16,7 +16,7 @@ export async function tgSend(
   env: Env,
   chatId: number,
   text: string,
-  parseMode = "HTML",
+  parseMode = "HTML"
 ): Promise<void> {
   const chunks = chunkMessage(text);
   for (const chunk of chunks) {
@@ -31,7 +31,7 @@ export async function tgSend(
 export async function tgSendChatAction(
   env: Env,
   chatId: number,
-  action: "typing" | "upload_document" | "find_location",
+  action: "typing" | "upload_document" | "find_location"
 ): Promise<void> {
   await fetch(`${TG_API}/bot${env.TELEGRAM_BOT_TOKEN}/sendChatAction`, {
     method: "POST",

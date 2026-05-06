@@ -8,9 +8,6 @@ function makeEnv(overrides: Partial<Env> = {}): Env {
     TELEGRAM_WEBHOOK_SECRET: "correct-secret",
     ALLOWED_USER_ID: "12345",
     ANTHROPIC_API_KEY: "anthropic-key",
-    WEBHOOK_SECRET: "webhook-secret",
-    CONV: {} as KVNamespace,
-    OAUTH: {} as KVNamespace,
     ...overrides,
   };
 }

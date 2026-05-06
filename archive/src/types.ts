@@ -1,8 +1,14 @@
 export interface Env {
+  // Secrets
   TELEGRAM_BOT_TOKEN: string;
   TELEGRAM_WEBHOOK_SECRET: string;
   ALLOWED_USER_ID: string;
   ANTHROPIC_API_KEY: string;
+  WEBHOOK_SECRET: string;
+
+  // KV Namespaces (added in later phases)
+  CONV: KVNamespace;
+  OAUTH: KVNamespace;
 }
 
 export interface TgUser {
