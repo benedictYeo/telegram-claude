@@ -110,13 +110,58 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (Populated during roadmap creation) | | |
+| INFRA-01 | Phase 1 | Pending |
+| INFRA-02 | Phase 1 | Pending |
+| INFRA-03 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | Pending |
+| INFRA-05 | Phase 1 | Pending |
+| INFRA-06 | Phase 1 | Pending |
+| INFRA-07 | Phase 1 | Pending |
+| INFRA-08 | Phase 1 | Pending |
+| INFRA-09 | Phase 1 | Pending |
+| INFRA-10 | Phase 1 | Pending |
+| INFRA-11 | Phase 1 | Pending |
+| CONV-01 | Phase 2 | Pending |
+| CONV-02 | Phase 2 | Pending |
+| CONV-03 | Phase 2 | Pending |
+| CONV-04 | Phase 2 | Pending |
+| LLM-01 | Phase 2 | Pending |
+| LLM-02 | Phase 2 | Pending |
+| LLM-03 | Phase 3 | Pending |
+| LLM-04 | Phase 3 | Pending |
+| LLM-05 | Phase 3 | Pending |
+| LLM-06 | Phase 3 | Pending |
+| LLM-07 | Phase 3 | Pending |
+| OBS-01 | Phase 4 | Pending |
+| OBS-02 | Phase 4 | Pending |
+| OBS-03 | Phase 4 | Pending |
+| OBS-04 | Phase 4 | Pending |
+| OBS-05 | Phase 4 | Pending |
+| SVC-01 | Phase 5 | Pending |
+| SVC-02 | Phase 5 | Pending |
+| SVC-03 | Phase 5 | Pending |
+| SVC-07 | Phase 5 | Pending |
+| SKILL-01 | Phase 6 | Pending |
+| SKILL-02 | Phase 6 | Pending |
+| SKILL-03 | Phase 6 | Pending |
+| SKILL-04 | Phase 6 | Pending |
+| SKILL-05 | Phase 6 | Pending |
+| CRON-01 | Phase 7 | Pending |
+| CRON-02 | Phase 7 | Pending |
+| CRON-03 | Phase 7 | Pending |
+| HOOK-01 | Phase 8 | Pending |
+| HOOK-02 | Phase 8 | Pending |
+| HOOK-03 | Phase 8 | Pending |
+| HOOK-04 | Phase 8 | Pending |
+| SVC-04 | Phase 9 | Pending |
+| SVC-05 | Phase 9 | Pending |
+| SVC-06 | Phase 9 | Pending |
 
 **Coverage:**
 - v1 requirements: 40 total
-- Mapped to phases: 0
-- Unmapped: 40
+- Mapped to phases: 40
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-05-06*
-*Last updated: 2026-05-06 after initial definition*
+*Last updated: 2026-05-06 after roadmap creation — traceability complete*
