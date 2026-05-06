@@ -34,7 +34,14 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. A tampered webhook signature returns 401; the health endpoint `/health` returns 200 with no sensitive info
   4. Slash commands are routed before AI dispatch; a message exceeding 4000 chars is chunked and delivered in parts
   5. Server auto-restarts after a simulated crash (PM2) and survives a reboot (launchd integration)
-**Plans**: TBD
+**Plans**: 5 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Project scaffold: dependencies, tsconfig, types, logger, ESLint/Prettier/lefthook
+- [ ] 01-02-PLAN.md — Port auth + telegram libs, create command router with /help and /ping
+- [ ] 01-03-PLAN.md — Hono app entry + webhook handler (ack-and-defer, routing, error handling, tests)
+- [ ] 01-04-PLAN.md — PM2 ecosystem config, setup.sh, README.md
+- [ ] 01-05-PLAN.md — Mac mini deployment smoke test (checkpoint)
 
 ### Phase 2: Conversation Core
 **Goal**: Ben can have a real multi-turn conversation with Claude via Telegram, with state that persists across sessions and resets on demand
@@ -136,7 +143,7 @@ Note: Phase 3 (Model Router Expansion) and Phase 4 (Obsidian) both depend only o
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure Foundation | 0/TBD | Not started | - |
+| 1. Infrastructure Foundation | 0/5 | Planning complete | - |
 | 2. Conversation Core | 0/TBD | Not started | - |
 | 3. Model Router Expansion | 0/TBD | Not started | - |
 | 4. Obsidian Integration | 0/TBD | Not started | - |
