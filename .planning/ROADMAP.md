@@ -45,7 +45,7 @@ Plans:
 - [x] 01-03-PLAN.md — Hono app entry + webhook handler (ack-and-defer, routing, error handling, tests)
 
 **Wave 3** *(blocked on Wave 2 completion)*
-- [ ] 01-04-PLAN.md — PM2 ecosystem config, setup.sh, README.md
+- [x] 01-04-PLAN.md — PM2 ecosystem config, setup.sh, README.md
 - [ ] 01-05-PLAN.md — Mac mini deployment smoke test (checkpoint)
 
 ### Phase 2: Conversation Core
@@ -148,7 +148,7 @@ Note: Phase 3 (Model Router Expansion) and Phase 4 (Obsidian) both depend only o
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure Foundation | 3/5 | Executing | - |
+| 1. Infrastructure Foundation | 4/5 | Executing | - |
 | 2. Conversation Core | 0/TBD | Not started | - |
 | 3. Model Router Expansion | 0/TBD | Not started | - |
 | 4. Obsidian Integration | 0/TBD | Not started | - |

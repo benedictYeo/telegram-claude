@@ -9,9 +9,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Infrastructure
 
-- [ ] **INFRA-01**: Server runs on Mac mini via Node.js, exposed via Tailscale Funnel
-- [ ] **INFRA-02**: PM2 manages process lifecycle with auto-restart on crash and reboot
-- [ ] **INFRA-03**: Mac mini sleep prevention configured (always available)
+- [x] **INFRA-01**: Server runs on Mac mini via Node.js, exposed via Tailscale Funnel
+- [x] **INFRA-02**: PM2 manages process lifecycle with auto-restart on crash and reboot
+- [x] **INFRA-03**: Mac mini sleep prevention configured (always available)
 - [x] **INFRA-04**: Auth gate verifies Telegram webhook secret header on every request
 - [x] **INFRA-05**: Auth gate silently drops messages from non-allowed user IDs
 - [x] **INFRA-06**: Ack-and-defer pattern — respond 200 immediately, process async
@@ -110,9 +110,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | Phase 1 | Pending |
-| INFRA-02 | Phase 1 | Pending |
-| INFRA-03 | Phase 1 | Pending |
+| INFRA-01 | Phase 1 | Complete |
+| INFRA-02 | Phase 1 | Complete |
+| INFRA-03 | Phase 1 | Complete |
 | INFRA-04 | Phase 1 | Complete |
 | INFRA-05 | Phase 1 | Complete |
 | INFRA-06 | Phase 1 | Complete |
