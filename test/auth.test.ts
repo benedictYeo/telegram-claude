@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { checkWebhookSignature, checkUserAllowed } from "../src/core/auth.js";
+import { checkWebhookSignature, checkUserAllowed } from "../src/lib/auth.js";
 import type { Env, TgUpdate } from "../src/types.js";
 
 function makeEnv(overrides: Partial<Env> = {}): Env {

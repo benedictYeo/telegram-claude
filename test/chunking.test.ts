@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { chunkMessage } from "../src/core/telegram.js";
+import { chunkMessage } from "../src/lib/telegram.js";
 
 describe("chunkMessage", () => {
   it("returns single empty string for empty input", () => {
