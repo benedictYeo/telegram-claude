@@ -37,9 +37,14 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 5 plans
 
 Plans:
+**Wave 1**
 - [ ] 01-01-PLAN.md — Project scaffold: dependencies, tsconfig, types, logger, ESLint/Prettier/lefthook
 - [ ] 01-02-PLAN.md — Port auth + telegram libs, create command router with /help and /ping
+
+**Wave 2** *(blocked on Wave 1 completion)*
 - [ ] 01-03-PLAN.md — Hono app entry + webhook handler (ack-and-defer, routing, error handling, tests)
+
+**Wave 3** *(blocked on Wave 2 completion)*
 - [ ] 01-04-PLAN.md — PM2 ecosystem config, setup.sh, README.md
 - [ ] 01-05-PLAN.md — Mac mini deployment smoke test (checkpoint)
 
