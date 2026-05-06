@@ -58,7 +58,17 @@ Plans:
   3. Ben types `/reset` and the next message starts a fresh conversation with no prior context
   4. Ben types `/status` and sees today's token count plus a running total
   5. A real LLM call never blocks the Telegram webhook response — `/health` stays responsive during processing
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+**Wave 1**
+- [ ] 02-01-PLAN.md — Install Anthropic SDK, create DB module with schema, extend Env types and config
+
+**Wave 2** *(blocked on Wave 1 completion)*
+- [ ] 02-02-PLAN.md — Conversation state module (SQLite CRUD, daily reset, token tracking) + model router (Anthropic SDK wrapper)
+
+**Wave 3** *(blocked on Wave 2 completion)*
+- [ ] 02-03-PLAN.md — Wire processUpdate to Claude, add /reset + /status commands, write tests
 
 ### Phase 3: Model Router Expansion
 **Goal**: Ben can switch between Claude, OpenAI GPT, and local Ollama models explicitly, with the chosen model persisting for the conversation
@@ -149,7 +159,7 @@ Note: Phase 3 (Model Router Expansion) and Phase 4 (Obsidian) both depend only o
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Infrastructure Foundation | 4/5 | Executing | - |
-| 2. Conversation Core | 0/TBD | Not started | - |
+| 2. Conversation Core | 0/3 | Not started | - |
 | 3. Model Router Expansion | 0/TBD | Not started | - |
 | 4. Obsidian Integration | 0/TBD | Not started | - |
 | 5. MCP Client Pool + Google Calendar | 0/TBD | Not started | - |
