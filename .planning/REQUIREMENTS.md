@@ -12,13 +12,13 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **INFRA-01**: Server runs on Mac mini via Node.js, exposed via Tailscale Funnel
 - [ ] **INFRA-02**: PM2 manages process lifecycle with auto-restart on crash and reboot
 - [ ] **INFRA-03**: Mac mini sleep prevention configured (always available)
-- [ ] **INFRA-04**: Auth gate verifies Telegram webhook secret header on every request
-- [ ] **INFRA-05**: Auth gate silently drops messages from non-allowed user IDs
+- [x] **INFRA-04**: Auth gate verifies Telegram webhook secret header on every request
+- [x] **INFRA-05**: Auth gate silently drops messages from non-allowed user IDs
 - [ ] **INFRA-06**: Ack-and-defer pattern — respond 200 immediately, process async
 - [ ] **INFRA-07**: Typing indicator sent before every AI call
-- [ ] **INFRA-08**: Message chunking at 4000 chars (safety margin under 4096)
+- [x] **INFRA-08**: Message chunking at 4000 chars (safety margin under 4096)
 - [ ] **INFRA-09**: Health check endpoint (no auth, no info disclosure)
-- [ ] **INFRA-10**: Slash-command routing (prefix match before AI dispatch)
+- [x] **INFRA-10**: Slash-command routing (prefix match before AI dispatch)
 - [ ] **INFRA-11**: Generic error feedback to user, real error logged by type only
 
 ### Conversation
@@ -113,13 +113,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INFRA-01 | Phase 1 | Pending |
 | INFRA-02 | Phase 1 | Pending |
 | INFRA-03 | Phase 1 | Pending |
-| INFRA-04 | Phase 1 | Pending |
-| INFRA-05 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | Complete |
+| INFRA-05 | Phase 1 | Complete |
 | INFRA-06 | Phase 1 | Pending |
 | INFRA-07 | Phase 1 | Pending |
-| INFRA-08 | Phase 1 | Pending |
+| INFRA-08 | Phase 1 | Complete |
 | INFRA-09 | Phase 1 | Pending |
-| INFRA-10 | Phase 1 | Pending |
+| INFRA-10 | Phase 1 | Complete |
 | INFRA-11 | Phase 1 | Pending |
 | CONV-01 | Phase 2 | Pending |
 | CONV-02 | Phase 2 | Pending |

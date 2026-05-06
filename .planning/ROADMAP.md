@@ -39,7 +39,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 **Wave 1**
 - [x] 01-01-PLAN.md — Project scaffold: dependencies, tsconfig, types, logger, ESLint/Prettier/lefthook
-- [ ] 01-02-PLAN.md — Port auth + telegram libs, create command router with /help and /ping
+- [x] 01-02-PLAN.md — Port auth + telegram libs, create command router with /help and /ping
 
 **Wave 2** *(blocked on Wave 1 completion)*
 - [ ] 01-03-PLAN.md — Hono app entry + webhook handler (ack-and-defer, routing, error handling, tests)
@@ -148,7 +148,7 @@ Note: Phase 3 (Model Router Expansion) and Phase 4 (Obsidian) both depend only o
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure Foundation | 1/5 | Executing | - |
+| 1. Infrastructure Foundation | 2/5 | Executing | - |
 | 2. Conversation Core | 0/TBD | Not started | - |
 | 3. Model Router Expansion | 0/TBD | Not started | - |
 | 4. Obsidian Integration | 0/TBD | Not started | - |
