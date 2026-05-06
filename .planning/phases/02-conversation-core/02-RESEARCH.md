@@ -572,19 +572,19 @@ upsertUsage.run(today, inputTokens, outputTokens);
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **DB path for tests**
+1. **DB path for tests** — RESOLVED: Plan 02-01 Task 2 adds `DB_PATH` env override to `src/db/index.ts`; Task 3 adds `DB_PATH: ":memory:"` to `vitest.config.ts`.
    - What we know: `data/bot.db` is the production path (Phase 1 D-23). Tests currently mock Telegram calls but do not touch SQLite.
    - What's unclear: Should `src/db/index.ts` accept a path override via env var (`DB_PATH`) for `:memory:` in tests?
    - Recommendation: Yes. Add `DB_PATH` to `vitest.config.ts` env block set to `:memory:`.
 
-2. **Token tracking update timing**
+2. **Token tracking update timing** — RESOLVED: Plan 02-02 Task 1 wraps `appendMessages` + `upsertUsage` in `db.transaction()`.
    - What we know: Token counts come back in the API response, alongside the assistant message.
    - What's unclear: Should token recording be part of the same transaction as message insert?
    - Recommendation: Yes — wrap `appendMessages` + `upsertUsage` in a single `db.transaction()` to keep counts consistent with stored messages.
 
-3. **Error handling for Claude API failures**
+3. **Error handling for Claude API failures** — RESOLVED: Plan 02-03 Task 1 uses existing catch block; `/status` reads SQLite only (no Claude dependency).
    - What we know: CLAUDE.md rule: generic "Something failed." to user, log error type only.
    - What's unclear: Should /status still work if Claude API is down?
    - Recommendation: `/status` reads only from SQLite — it has no Claude dependency, always works.
